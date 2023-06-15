@@ -1,0 +1,19 @@
+image:
+  file: .gitpod.Dockerfile
+
+
+tasks:
+  - name: launch spring boot app
+    command: cd studentapi && mvn spring-boot:run 
+
+
+ports:
+  - port: 8080
+    onOpen: open-browser
+    visibility: public
+
+vscode:
+  extensions:
+    - Pivotal.vscode-boot-dev-pack
+    - vscjava.vscode-java-pack
+    - cweijan.vscode-postgresql-client2
